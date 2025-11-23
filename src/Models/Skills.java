@@ -12,17 +12,17 @@ public class Skills {
         this.ai=new ArrayList<>();
     }
     
-    public void addCore(String skil){
-        core.add(skil);
+    public void addCore(String skill){
+        core.add(skill);
     }
-    public void addWebDev(String skil){
-        webDev.add(skil);
+    public void addWebDev(String skill){
+        webDev.add(skill);
     }
-    public void addDataBase(String skil){
-        dataBase.add(skil);
+    public void addDataBase(String skill){
+        dataBase.add(skill);
     }
-    public void addAi(String skil){
-        ai.add(skil);
+    public void addAi(String skill){
+        ai.add(skill);
     }
 
     public List<String> getCore(){

@@ -11,7 +11,7 @@ import src.Models.Student;
 
 public class StudentFilter {
 
-    public void Skill_Match_Company(Student stud,List<Company> companies){
+    public List<Company> Skill_Match_Company(Student stud,List<Company> companies){
         Skills stu=stud.getSkills();
         List<String>comm_core=new ArrayList<>(stu.getCore());
         List<String>comm_webDev=new ArrayList<>(stu.getWebDev());
@@ -52,6 +52,7 @@ public class StudentFilter {
                 result.add(i);
             }
         }
+        return result;
     }
     public List<Company> LPA_filter(int start,int end,List<Company> companies){
         List<Company> result=new ArrayList<>();
@@ -65,7 +66,7 @@ public class StudentFilter {
         return result;
     }
 
-    public List<Company> Role_filter(List<Company> companies, String role) {
+    public List<Company> Role_filter(String role,List<Company> companies) {
         List<Company> result = new ArrayList<>();
         Status checkStatus = Status.valueOf(role.toUpperCase());
 
