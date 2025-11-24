@@ -11,13 +11,19 @@ public class Controller {
     private CompanyService comSer;
     private StudentFilter stuFil;
     private CompanyFilter comFil;
+    private PickService pickSer;
     
     public Controller(){
         stuSer=new StudentService();
         comSer=new CompanyService();
         stuFil=new StudentFilter();
         comFil=new CompanyFilter();
+        pickSer=new PickService();
 
+    }
+
+    public PickService getPickSer() {
+        return pickSer;
     }
 
     public StudentService getStuSer() {

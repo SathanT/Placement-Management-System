@@ -1,0 +1,12 @@
+# Sample input (informational) - not parsed by the current Main.java
+# This file shows example records you can use if you later implement file parsing.
+
+{
+  "students": [
+    {"id":"S001","name":"Alice","phone":"9990001111","email":"alice@example.com","district":"Coimbatore","city":"Gandhipuram","state":"TamilNadu","country":"India","pincode":641001,"skills":{"core":["C"],"web":["HTML"],"db":["MySQL"]}},
+    {"id":"S002","name":"Bob","phone":"9990002222","email":"bob@example.com","district":"Salem","city":"Edapadi","state":"TamilNadu","country":"India","pincode":636501,"skills":{"core":["C++"],"ai":["Python"],"db":["Postgres"]}}
+  ],
+  "companies": [
+    {"id":"C001","name":"TechSoft","role":"SDE","lpa":6,"internDur":"6 months","district":"Coimbatore","city":"Gandhipuram","state":"TamilNadu","country":"India","pincode":641001,"reqSkills":{"core":["Java"],"web":["Spring"]}}
+  ]
+}

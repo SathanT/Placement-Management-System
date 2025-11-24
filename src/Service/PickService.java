@@ -34,4 +34,27 @@ public class PickService {
         System.out.println("Company Location  :  "+loc.getCity());
 
     }
+
+    public void filtered_students(List<Student> students){
+        System.out.println("\n--- Filtered Students ("+students.size()+") ---");
+        for(Student st : students){
+            System.out.println("Student Index: "+(students.indexOf(st)+1));
+            System.out.println("Student ID: "+st.getId());
+            System.out.println("Student Name: "+st.getName());
+            System.out.println("Student Email: "+st.getEmail());
+            System.out.println("Student Phone: "+st.getDetail().getPhno());
+            System.out.println("--------------------------------------------");
+        }
+    }
+
+    public void filtered_companies(List<Company> companies){
+        System.out.println("\n--- Filtered Companies ("+companies.size()+") ---");
+        for(Company c : companies){
+            System.out.println("Company Index: "+(companies.indexOf(c)+1));
+            System.out.println("Company ID: "+c.getId());
+            System.out.println("Company Name: "+c.getName());
+            System.out.println("Company City: "+c.getLocation().getCity());
+            System.out.println("--------------------------------------------");
+        }
+    }
 }

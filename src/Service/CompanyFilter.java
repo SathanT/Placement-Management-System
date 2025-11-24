@@ -17,36 +17,16 @@ public class CompanyFilter {
         List<String>comm_ai=new ArrayList<>(req.getAi());
 
         List<Student> result=new ArrayList<>(); //store result company
-        int counter=1;
+        
         for(Student i : students){
             Skills skill=i.getSkills();
-            boolean flag=true;
             //get common skills
             comm_core.retainAll(skill.getCore());
             comm_webDev.retainAll(skill.getWebDev());
             comm_dataBase.retainAll(skill.getDataBase());
             comm_ai.retainAll(skill.getAi());
 
-            if(!comm_core.isEmpty() || !comm_webDev.isEmpty() || !comm_dataBase.isEmpty() || !comm_ai.isEmpty()){
-                if(flag){
-                    System.out.println("-------Your Requirements are matched with this Students-------");
-                    flag=false;
-                }
-                System.out.println("Student Index : "+counter++);
-                System.out.println("Student Name  : "+i.getName());
-                
-                if(!comm_core.isEmpty()){
-                    System.out.println("Matched core Skill :"+comm_core);
-                }                
-                if(!comm_webDev.isEmpty()){
-                    System.out.println("Matched Web Dev Skill :"+comm_webDev);
-                }
-                if(!comm_dataBase.isEmpty()){
-                    System.out.println("Matched Database Skill :"+comm_dataBase);
-                }
-                if(!comm_ai.isEmpty()){
-                    System.out.println("Matched AI Skill :"+comm_ai);      
-                }                                     
+            if(!comm_core.isEmpty() || !comm_webDev.isEmpty() || !comm_dataBase.isEmpty() || !comm_ai.isEmpty()){                                                      
                 result.add(i);
             }
         }
