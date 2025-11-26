@@ -19,16 +19,16 @@ public class Main {
         Skills sk10 = new Skills(); sk10.addCore("Rust"); sk10.addWebDev("Svelte"); sk10.addAi("NLP");
 
         // Create students
-        controll.getStuSer().add_students(makeStudent("S001","Alice", "9990001111", "alice@example.com", "Coimbatore","Gandhipuram","TamilNadu","India",641001, sk1));
-        controll.getStuSer().add_students(makeStudent("S002","Bob", "9990002222", "bob@example.com", "Salem","Edapadi","TamilNadu","India",636501, sk2));
-        controll.getStuSer().add_students(makeStudent("S003","Carol", "9990003333", "carol@example.com", "Chennai","Adyar","TamilNadu","India",600020, sk3));
-        controll.getStuSer().add_students(makeStudent("S004","David", "9990004444", "david@example.com", "Madurai","Melur","TamilNadu","India",625020, sk4));
-        controll.getStuSer().add_students(makeStudent("S005","Eve", "9990005555", "eve@example.com", "Trichy","Anna Nagar","TamilNadu","India",620001, sk5));
-        controll.getStuSer().add_students(makeStudent("S006","Frank", "9990006666", "frank@example.com", "Salem","Omalur","TamilNadu","India",636456, sk6));
-        controll.getStuSer().add_students(makeStudent("S007","Grace", "9990007777", "grace@example.com", "Erode","Surampatti","TamilNadu","India",638009, sk7));
-        controll.getStuSer().add_students(makeStudent("S008","Heidi", "9990008888", "heidi@example.com", "Tirunelveli","Palayam","TamilNadu","India",627001, sk8));
-        controll.getStuSer().add_students(makeStudent("S009","Ivan", "9990009999", "ivan@example.com", "Salem","Sangagiri","TamilNadu","India",637301, sk9));
-        controll.getStuSer().add_students(makeStudent("S010","Judy", "9990010000", "judy@example.com", "Vellore","Katpadi","TamilNadu","India",632007, sk10));
+        controll.getStuSer().add_students(makeStudent(1,"Alice", "9990001111", "alice@example.com", "Coimbatore","Gandhipuram","TamilNadu","India",641001, sk1));
+        controll.getStuSer().add_students(makeStudent(2,"Bob", "9990002222", "bob@example.com", "Salem","Edapadi","TamilNadu","India",636501, sk2));
+        controll.getStuSer().add_students(makeStudent(3,"Carol", "9990003333", "carol@example.com", "Chennai","Adyar","TamilNadu","India",600020, sk3));
+        controll.getStuSer().add_students(makeStudent(4,"David", "9990004444", "david@example.com", "Madurai","Melur","TamilNadu","India",625020, sk4));
+        controll.getStuSer().add_students(makeStudent(5,"Eve", "9990005555", "eve@example.com", "Trichy","Anna Nagar","TamilNadu","India",620001, sk5));
+        controll.getStuSer().add_students(makeStudent(6,"Frank", "9990006666", "frank@example.com", "Salem","Omalur","TamilNadu","India",636456, sk6));
+        controll.getStuSer().add_students(makeStudent(7,"Grace", "9990007777", "grace@example.com", "Erode","Surampatti","TamilNadu","India",638009, sk7));
+        controll.getStuSer().add_students(makeStudent(8,"Heidi", "9990008888", "heidi@example.com", "Tirunelveli","Palayam","TamilNadu","India",627001, sk8));
+        controll.getStuSer().add_students(makeStudent(9,"Ivan", "9990009999", "ivan@example.com", "Salem","Sangagiri","TamilNadu","India",637301, sk9));
+        controll.getStuSer().add_students(makeStudent(10,"Judy", "9990010000", "judy@example.com", "Vellore","Katpadi","TamilNadu","India",632007, sk10));
 
         // Create job details and companies
         JobDetails jd1 = new JobDetails(6, "6 months", 10000); jd1.setRole(JobDetails.Status.SDE);
@@ -44,11 +44,11 @@ public class Main {
         Skills req4 = new Skills(); req4.addCore("C++"); req4.addDataBase("Postgres");
         Skills req5 = new Skills(); req5.addCore("Rust"); req5.addWebDev("Svelte");
 
-        controll.getComSer().add_companies(makeCompany("C001","TechSoft", jd1, "Coimbatore","Gandhipuram","TamilNadu","India",641001, req1));
-        controll.getComSer().add_companies(makeCompany("C002","NodeWorks", jd2, "Salem","Edapadi","TamilNadu","India",636501, req2));
-        controll.getComSer().add_companies(makeCompany("C003","DataLabs", jd3, "Chennai","Adyar","TamilNadu","India",600020, req3));
-        controll.getComSer().add_companies(makeCompany("C004","FastSystems", jd4, "Madurai","Melur","TamilNadu","India",625020, req4));
-        controll.getComSer().add_companies(makeCompany("C005","InnovateX", jd5, "Bengaluru","Whitefield","Karnataka","India",560066, req5));
+        controll.getComSer().add_companies(makeCompany(1,"TechSoft", jd1, "Coimbatore","Gandhipuram","TamilNadu","India",641001, req1));
+        controll.getComSer().add_companies(makeCompany(2,"NodeWorks", jd2, "Salem","Edapadi","TamilNadu","India",636501, req2));
+        controll.getComSer().add_companies(makeCompany(3,"DataLabs", jd3, "Chennai","Adyar","TamilNadu","India",600020, req3));
+        controll.getComSer().add_companies(makeCompany(4,"FastSystems", jd4, "Madurai","Melur","TamilNadu","India",625020, req4));
+        controll.getComSer().add_companies(makeCompany(5,"InnovateX", jd5, "Bengaluru","Whitefield","Karnataka","India",560066, req5));
 
         List<Company> filter=controll.getStuFil().LPA_filter(4, 8, controll.getComSer().get_Companies());
         System.out.println("\nCompanies with LPA between 4 and 8:");
@@ -58,13 +58,13 @@ public class Main {
 
     }
 
-    private static Student makeStudent(String id, String name, String phno, String email, String district, String city, String state, String country, int pin, Skills skills){
+    private static Student makeStudent(int id, String name, String phno, String email, String district, String city, String state, String country, int pin, Skills skills){
         Location loc = new Location(district,city,state,country,pin);
         stuDet det = new stuDet(phno, email, loc);
         return new Student(id, name, det, email, skills);
     }
 
-    private static Company makeCompany(String id, String name, JobDetails jd, String district, String city, String state, String country, int pin, Skills req){
+    private static Company makeCompany(int id, String name, JobDetails jd, String district, String city, String state, String country, int pin, Skills req){
         Location loc = new Location(district,city,state,country,pin);
         return new Company(id, name, jd, loc, req);
     }

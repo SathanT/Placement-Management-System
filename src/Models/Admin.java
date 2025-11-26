@@ -2,9 +2,9 @@ package src.Models;
 
 
 public class Admin {
-    protected String id;
+    protected int id;
     protected String name;
-    public Admin(String id,String name){
+    public Admin(int id,String name){
         this.id=id;
         this.name=name;
     }

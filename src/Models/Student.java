@@ -5,14 +5,25 @@ public class Student extends Admin{
     private String email;
     private Skills skills;
 
-    public Student(String id,String name,stuDet detail,String email,Skills skill){
+    public Student(int id,String name,stuDet detail,String email,Skills skill){
         super(id,name);
         this.detail=detail;
         this.email=email;
         this.skills=skill;
     }
 
-    public String getId(){
+
+    public Student() {
+        super(0,"");
+    }
+
+    public void setId(int id){
+        this.id=id;
+    }
+    public void setName(String name){
+        this.name=name;
+    }
+    public int getId(){
         return id;
     }
     public String getName(){

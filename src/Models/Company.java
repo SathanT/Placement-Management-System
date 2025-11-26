@@ -4,7 +4,7 @@ public class Company extends Admin{
     private Location location;
     private Skills reqSkills;
 
-    public  Company(String id,String name,JobDetails det,Location location,Skills reqSkills){
+    public  Company(int id,String name,JobDetails det,Location location,Skills reqSkills){
         super(id,name);
         this.det=det;
         this.location=location;
@@ -26,10 +26,10 @@ public class Company extends Admin{
         this.name=name;
     }
 
-    public String getId(){
+    public int getId(){
         return id;
     }
-    public void setId(String id){
+    public void setId(int id){
         this.id=id;
     }
 
