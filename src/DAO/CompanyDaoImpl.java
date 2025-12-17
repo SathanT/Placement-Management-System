@@ -33,7 +33,7 @@ public class CompanyDaoImpl implements CompanyDAO{
             }
             
 
-            JobDetails detail=company.getDet();
+            JobDetails detail=company.getDet();//------>extract details from the company
             String inDet="insert into company_detail(company_id,role,lpa,intern_duration,stiphen) values (?,?,?,?,?)";
             det=conn.prepareStatement(inDet,PreparedStatement.RETURN_GENERATED_KEYS);
             det.setInt(1,comId);
@@ -43,7 +43,7 @@ public class CompanyDaoImpl implements CompanyDAO{
             det.setInt(3, detail.getStiphen());
             det.executeUpdate();
 
-            Location location=company.getLocation();
+            Location location=company.getLocation();//------>extract location from the compnay
             String inLoc="insert into company_Location(company_id,city,district,pincode,state,country)"+
             "values(?,?,?,?,?)";
             loc=conn.prepareStatement(inLoc);
